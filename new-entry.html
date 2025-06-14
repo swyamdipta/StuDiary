@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Entry</title>
+    <link rel="stylesheet" href="./new-entry.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+        <header>
+        <div class="identity-container">
+            <a href="/" class="nav-item">StuDiary</a>
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul class="nagivation-links">
+                <li><a href="./manage-topics.html" class="nav-item nagivation-link">Manage Topics</a></li>
+                <li><a href="./why-StuDiary.html" class="nav-item nagivation-link">Why StuDiary?</a></li>
+                <li><a href="./about.html" class="nav-item nagivation-link">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+
+        <button class="mobile-menu-button" aria-label="Toggle mobile menu">
+            <img src="./src/mobile-menu.png" alt="Menu">
+        </button>
+    </header>
+
+    <nav class="mobile-menu" aria-hidden="true">
+    <ul>
+        <li><a href="./manage-topics.html"><img src="./src/topics.png" alt="manage-icon">Manage Topics</a></li>
+        <li><a href="./why-StuDiary.html"><img src="./src/question-mark.png" alt="question-mark">Why StuDiary?</a></li>
+        <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
+    </ul>
+    </nav>
+    <h1 id="page-title">New Note Entry</h1>
+    <div>
+        <label for="date-input">Pick A Date: </label><input type="date" name="" id="date-input">
+        <span>  or <button id="today-button">Today</button>
+        </span>
+    </div>
+    <div id="date-and-notes-container" hidden>
+        <div id="date-display"></div>
+        <div id="text-container">
+            <form id="notes-entry-form">
+                <div id="label-and-selection-tag-container-0">
+                    <label for="topic-selection">Select a topic: </label>
+                    <select name="" id="topic-selection-0" required>
+                    </select>
+                </div>
+                <span><a href="./manage-topics.html">[Manage Topics]</a></span>
+                <br>
+                <label for="summary-text-0">Enter a short summary: </label>
+                <input type="text" name="" class="summary" id="summary-text-0">
+                <br>
+                <label for="textarea-0" id="label-for-notes" class="notes-labels">Write Your Notes Here: </label>
+                <br>
+                <textarea name="notes" id="textarea-0" class="notes-textarea" required></textarea>
+                <div id="add-record-button-container">
+                    <button id="add-new-record">Add A Record (Topic & Note)</button>
+                </div>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            
+        </div>
+    </div>
+
+    <script type="module" src="./new-entry.js"></script>
+    <script type="module" src="./utils/common.js"></script>
+</body>
+</html>

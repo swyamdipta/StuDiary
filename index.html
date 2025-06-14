@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuDiary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <header>
+        <div class="identity-container">
+            <a href="/" class="nav-item">StuDiary</a>
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul class="nagivation-links">
+                <li><a href="./manage-topics.html" class="nav-item nagivation-link">Manage Topics</a></li>
+                <li><a href="./why-StuDiary.html" class="nav-item nagivation-link">Why StuDiary?</a></li>
+                <li><a href="./about.html" class="nav-item nagivation-link">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+
+        <button class="mobile-menu-button" aria-label="Toggle mobile menu">
+            <img src="./src/mobile-menu.png" alt="Menu">
+        </button>
+    </header>
+
+    <nav class="mobile-menu" aria-hidden="true">
+    <ul>
+        <li><a href="./manage-topics.html"><img src="./src/topics.png" alt="manage-icon">Manage Topics</a></li>
+        <li><a href="./why-StuDiary.html"><img src="./src/question-mark.png" alt="question-mark">Why StuDiary?</a></li>
+        <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
+    </ul>
+    </nav>
+    <div class="main-contents">
+        <div class="left-container inner-container">
+            <div class="date-area"></div>
+            <div class="new-entry-button-container">
+                <a href="./new-entry.html" class="button-link">New Entry &UpperRightArrow;</a>
+            </div>
+            <div class="revision-container">
+                <h3>Let's Revise What You've Learnt Yesterday & A Week Ago</h3>
+                <div class="daily-revision-container" hidden>
+                    <div class="note-date" id="yesterday-date-container"></div>
+                    <div class="topics-container topics-container-daily"></div>
+                    <div class="summaries-container summaries-container-daily"></div>
+                    <div class="daily-revision-content-box"></div>
+                </div>
+                    <div class="weekly-revision-container" hidden>
+                    <div class="note-date" id="weekly-date-container"></div>
+                    <div class="topics-container topics-container-weekly"></div>
+                    <div class="summaries-container summaries-container-weekly"></div>
+                    <div class="weekly-revision-content-box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-container inner-container">
+            <img src="./src/dairy.png" alt="">
+        </div>
+    </div>
+    <script type="module" src="./index.js"></Script>
+</body>
+</html>

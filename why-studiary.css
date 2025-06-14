@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+p, ul{
+    line-height: 2em;
+}
+ul{
+    margin-left: 20px;
+}

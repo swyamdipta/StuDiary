@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage topics</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+    </style>
+</head>
+<body>
+        <header>
+        <div class="identity-container">
+            <a href="/" class="nav-item">StuDiary</a>
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul class="nagivation-links">
+                <li><a href="./manage-topics.html" class="nav-item nagivation-link">Manage Topics</a></li>
+                <li><a href="./why-StuDiary.html" class="nav-item nagivation-link">Why StuDiary?</a></li>
+                <li><a href="./about.html" class="nav-item nagivation-link">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+
+        <button class="mobile-menu-button" aria-label="Toggle mobile menu">
+            <img src="./src/mobile-menu.png" alt="Menu">
+        </button>
+    </header>
+
+    <nav class="mobile-menu" aria-hidden="true">
+    <ul>
+        <li><a href="./manage-topics.html"><img src="./src/topics.png" alt="manage-icon">Manage Topics</a></li>
+        <li><a href="./why-StuDiary.html"><img src="./src/question-mark.png" alt="question-mark">Why StuDiary?</a></li>
+        <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
+    </ul>
+    </nav>
+    <h1>Manage topics</h1>
+    <div id="add-topic-section">
+        <h2>Add A topic</h2>
+        <form id="add-topic-form">
+        <label for="add-topic-text">Enter a topic Name: </label>
+        <input type="text" name="topic" id="add-topic-text">
+        <input type="submit" value="Add">
+    </form>
+    </div>
+    <div id="delete-topic-section">
+        <h2>Delete A Topic</h2>
+        <div id="delete-topic-form-container">
+            <form id="delete-topic-form">
+            <label for="delete-topic-text">Select a topic: </label>
+            <select name="" id="delete-topic-selection">
+            </select>
+            <input type="submit" value="Delete">
+        </form>
+        </div>
+        <div id="message-field" hidden></div>
+    </div>
+    <script src="./manage-topics.js"></script>
+    <script type="module" src="./utils/common.js"></script>
+</body>
+</html>
