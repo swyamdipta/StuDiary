@@ -1,0 +1,50 @@
+.date-area{
+    line-height: 200%;
+    text-align: center;
+}
+.main-container{
+    margin: 5px;
+}
+.date-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    justify-content: center;
+}
+#date-input{
+    padding: 6px 8px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.record{
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.topic, .summary, .note{
+    margin-top: .5em;
+    padding-bottom: .5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 1.5rem;
+    width: max-content;
+    border-radius: 5px;
+}
+.topic, .summary{
+    background: linear-gradient(to right, #ffdb3c, #fff980, #ffffff);
+    border: 1px solid linear-gradient(to right, #ffdb3c, #fff980, #fffcc6);
+    border-left: 3px solid rgb(116, 27, 0);
+}
+.note{
+    width: 100%;
+    border: 1px solid rgb(186, 186, 186);
+    border-left: 3px solid rgb(116, 27, 0);
+    background: linear-gradient(to right, #fffdde, #ffffff);
+    line-height: 150%;
+}

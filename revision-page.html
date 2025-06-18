@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Page</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./revision-page.css">
+</head>
+<body>
+    <header>
+        <div class="identity-container">
+            <a href="./" class="nav-item">StuDiary</a>
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <ul class="nagivation-links">
+                <li><a href="./revision-page.html" class="nav-item nagivation-link">Revise</a></li>
+                <li><a href="./manage-topics.html" class="nav-item nagivation-link">Manage Topics</a></li>
+                <li><a href="./why-studiary.html" class="nav-item nagivation-link">Why StuDiary?</a></li>
+                <li><a href="./about.html" class="nav-item nagivation-link">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+
+        <button class="mobile-menu-button" aria-label="Toggle mobile menu">
+            <img src="./src/mobile-menu.png" alt="Menu">
+        </button>
+    </header>
+
+    <nav class="mobile-menu" aria-hidden="true">
+    <ul>
+        <li><a href="./revision-page.html"><img src="./src/revision.png" alt="revision-icon">Revise</a></li>
+        <li><a href="./manage-topics.html"><img src="./src/topics.png" alt="manage-icon">Manage Topics</a></li>
+        <li><a href="./why-StuDiary.html"><img src="./src/question-mark.png" alt="question-mark">Why StuDiary?</a></li>
+        <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
+    </ul>
+    </nav>
+    <div class="date-area"></div>
+    <div class="main-container">
+        <div class="date-picker">
+            <label for="date-input">Pick A Date:</label><input type="date" name="" id="date-input">
+        </div>
+    </div>
+    <script src="./revision-page.js"></script>
+    <script type="module" src="./utils/common.js"></script>
+</body>
+</html>
