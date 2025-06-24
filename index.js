@@ -62,10 +62,16 @@ if(topicsAndSummariesYesterday.recordExists){
     document.querySelector(".daily-revision-container").hidden = false
 }
 else{
-    document.querySelector(".daily-revision-container").innerHTML = `<div style="text-align:center;">No records found for yesterday</div>`
+    document.querySelector(".daily-revision-container").innerHTML = `<br><div style="text-align:center;">No records found for yesterday</div>`
     document.querySelector(".daily-revision-container").hidden = false
 }
 
+const yesterdayRevisionLink = document.querySelector("#yesterday-revision-link")
+if(yesterdayRevisionLink){
+    yesterdayRevisionLink.setAttribute("href", `./revision-page.html?date=${yesterdayYYYYMMDD}`)
+}
+
+//One Week Ago
 const dateOneWeekAgo = getDateOneWeekAgo()
 const dateOneWeekAgoYYYYMMDD = dateOneWeekAgo.getFullYear().toString() + "-" + (dateOneWeekAgo.getMonth()+1).toString().padStart(2, "0") + "-" + dateOneWeekAgo.getDate().toString().padStart(2, "0")
 const dateOneWeekAgoDDMMYYYY = dateOneWeekAgo.getDate().toString() + "-" + (dateOneWeekAgo.getMonth()+1).toString().padStart(2, "0") + "-" + dateOneWeekAgo.getFullYear().toString().padStart(2, "0")
@@ -92,6 +98,6 @@ if(topicsAndSummariesOneWeekAgo.recordExists){
     document.querySelector(".weekly-revision-container").hidden = false
 }
 else{
-    document.querySelector(".weekly-revision-container").innerHTML = `<div style="text-align:center;">No records found for day one week ago</div>`
+    document.querySelector(".weekly-revision-container").innerHTML = `<br><div style="text-align:center;">No records found for day one week ago</div>`
     document.querySelector(".weekly-revision-container").hidden = false
 }

@@ -24,6 +24,7 @@ header{
     padding: 1.5em;
     background-color: #f8ff3a;
     border-bottom: 5px solid rgb(255, 82, 63);
+    width: 100vw;
 }
 .nagivation-links{
     list-style: none;

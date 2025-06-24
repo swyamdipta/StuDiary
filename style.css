@@ -115,4 +115,7 @@
     .right-container{
         display: none;
     }
+    #yesterday-revision-link{
+        width: 100%;
+    }
 }

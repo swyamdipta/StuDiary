@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+}
+h2{
+    line-height: 3rem;
+}
+#add-topic-section, #delete-topic-section{
+    line-height: 2rem;
+    margin: 0.5rem 1rem;
+}
+#add-topic-text, #delete-topic-selection{
+    padding: 6px 8px;
+}
+.action-button{
+    padding: 6px 1.5rem;
+    color: #fff;
+    background-color: rgb(33, 150, 243);
+    font-size: 16px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.action-button:hover{
+    background-color: rgb(0, 133, 242);
+}
+
+@media screen and (max-device-width: 768px) {
+    .action-button{
+        width: 100%;
+        margin-top: .5rem;
+    }
+    .form-container input{
+        width: 100%;
+    }
+    #delete-topic-form select{
+        width: 100%;
+    }
+}

@@ -6,6 +6,8 @@ let numberOfRecords = 1
 const todayButton = document.getElementById("today-button")
 todayButton.addEventListener("click", (e)=>{
     e.preventDefault()
+    dateInputFromCalender.value = ""    //Resets the date input
+    todayButton.style.backgroundColor = "#b2ff60"
     const currentDate = getCurrentDate()
     selectedDate = currentDate
     console.log("Selected Date = ", selectedDate)
@@ -14,6 +16,7 @@ todayButton.addEventListener("click", (e)=>{
 
 const dateInputFromCalender = document.getElementById("date-input");
 dateInputFromCalender.addEventListener("change", (e)=>{
+    todayButton.style.backgroundColor = "#efff60"  //Resets to default button colour
     selectedDate = dateInputFromCalender.value
     console.log("Selected Date = ", selectedDate)
     displayDateAndNotesArea(dateInputFromCalender.value)
@@ -55,6 +58,8 @@ document.getElementById("add-new-record").addEventListener("click", (e)=>{
 
 function addNewNotesNode(recordIndex){
     const newDiv = document.createElement("div")
+    newDiv.setAttribute("class", "dynamically-created-divs")
+    newDiv.setAttribute("class", "topic-note-container")
     newDiv.innerHTML = `
     <div id="label-and-selection-tag-container-${recordIndex}">
         <label for="topic-selection">Select a topic: </label>

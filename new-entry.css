@@ -5,22 +5,59 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 body{
-    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 #page-title{
     text-align: center;
+}
+.date-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#date-input{
+    padding: 6px 8px;
+    border: 2px solid #f95f00;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#today-button{
+    padding: 5px 10px;
+    background-color: #efff60;
+    color: #000000;
+    border: 2px solid darkgreen;
+    cursor: pointer;
+}
+#date-and-notes-container{
+    margin: 0px 5px;
+}
+.summary{
+    padding: 6px 8px;
+    margin: 0.5rem 0rem;
+    width: 100%;
+}
+.topic-note-container{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0px;
 }
 #date-display{
     text-align: center;
     padding: 5px;
     background-color: rgb(246, 255, 191);
+    margin: 1rem 0rem;
 }
 .notes-labels{
     display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0.5rem 0rem;
     text-decoration: wavy;
 }
 .notes-textarea{
@@ -39,4 +76,39 @@ body{
     padding: 5px;
     color: whitesmoke;
     background-color: rgb(0, 89, 118);
+    cursor: pointer;
+}
+#add-new-record:hover{
+    background-color: rgb(0, 62, 83);
+}
+.submit-button-container{
+    display: flex;
+    justify-content: center;
+}
+#submit-button{
+    padding: .5rem 2rem;
+    color: #fff;
+    background-color: rgb(33, 150, 243);
+    font-size: 16px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+#submit-button:hover{
+    background-color: rgb(0, 130, 237);
+}
+
+select{
+    padding: 5px;
+}
+
+@media screen and (max-device-width: 768px){
+    .date-picker{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+        flex-wrap: wrap;
+    }
+    
 }

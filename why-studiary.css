@@ -1,9 +1,13 @@
 h1{
     text-align: center;
+    margin: 1rem;
 }
 p, ul{
     line-height: 2em;
 }
 ul{
     margin-left: 20px;
+}
+.main-contents{
+    margin: 0rem 1rem;
 }

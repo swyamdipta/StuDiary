@@ -2,13 +2,20 @@ const addtopicForm = document.getElementById("add-topic-form")
 addtopicForm.addEventListener("submit", (e)=>{
     e.preventDefault()
     const topicName = document.getElementById("add-topic-text").value
-    if(!isDuplicateEntry(topicName)){
-        addTopic(topicName)
+    if(isBlankString(topicName)){
+        alert("Topic cannot be blank.")
+        return
     }
-    else{
+    if(isDuplicateEntry(topicName)){
         alert("Topic already in list.")
+        return
     }
+    addTopic(topicName)
 })
+
+function isBlankString(str){
+    return (str.trim().length === 0)
+}
 
 function isDuplicateEntry(topicName){
     let storedTopics = []
