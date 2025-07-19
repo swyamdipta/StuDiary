@@ -110,6 +110,10 @@
     margin-bottom: 5px;
 }
 
+#yesterday-revision-link, #week-ago-revision-link{
+    width: 100%;
+}
+
 
 @media screen and (max-device-width: 768px){
     .right-container{

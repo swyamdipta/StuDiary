@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.main-contents{
+    margin: 0rem 1rem;
+    line-height: 1.5rem;
+}
+
+.list-container{
+    margin-left: 1.5rem;
+}
+footer{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}

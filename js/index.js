@@ -97,6 +97,9 @@ document.querySelector(".summaries-container-weekly").innerHTML = `${summariesPr
 if(topicsAndSummariesOneWeekAgo.recordExists){
     document.querySelector(".weekly-revision-container").hidden = false
 }
+else if (!topicsAndSummariesYesterday.recordExists && !topicsAndSummariesOneWeekAgo.recordExists){ //If both records does not exist
+        document.querySelector(".daily-revision-container").innerHTML = `<br><div style="text-align:center;">No records found</div>`
+}
 else{
     document.querySelector(".weekly-revision-container").innerHTML = `<br><div style="text-align:center;">No records found for day one week ago</div>`
     document.querySelector(".weekly-revision-container").hidden = false
