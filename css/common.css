@@ -39,7 +39,7 @@ header{
     color: whitesmoke;
     border: none;
     border-radius: 20px;
-    transition: ease-in 100ms;
+    transition: background-color ease-in 100ms, padding ease 200ms;
 }
 
 /* Media Queries */

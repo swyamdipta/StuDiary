@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage topics</title>
+    <title>Filter By Topic</title>
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/manage-topics.css">
+    <link rel="stylesheet" href="./css/filter-by-topic.css">
 </head>
 <body>
         <header>
@@ -39,30 +39,13 @@
         <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
     </ul>
     </nav>
-    <h1>Manage topics</h1>
-    <div id="add-topic-section">
-        <h2>Add A topic</h2>
-        <div class="add-topic-form-container form-container">
-            <form id="add-topic-form">
-            <label for="add-topic-text">Enter a topic Name: </label>
-            <input type="text" name="topic" id="add-topic-text">
-            <input type="submit" value="Add" id="add-topic-button" class="action-button">   
-        </div>
-    </form>
+    <h1>Pick A Topic</h1>
+    <div class="pick-topic-container">
+        <span class="pick-a-topic-span">Pick A Topic: </span>
+        <select id="topic-selection"></select>
     </div>
-    <div id="delete-topic-section">
-        <h2>Delete A Topic</h2>
-        <div id="delete-topic-form-container" class="form-container">
-            <form id="delete-topic-form">
-            <label for="delete-topic-text">Select a topic: </label>
-            <select name="" id="delete-topic-selection">
-            </select>
-            <input type="submit" value="Delete" class="action-button">
-        </form>
-        </div>
-        <div id="message-field" hidden></div>
-    </div>
-    <script type="module" src="./js/utils/common.js"></script>
-    <script src="./js/manage-topics.js"></script>
+    <div class="display-box"></div>
+    <script src="./js/utils/common.js" type="module"></script>
+    <script src="./js/filter-by-topics.js"></script>
 </body>
 </html>

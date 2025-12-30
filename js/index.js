@@ -62,7 +62,7 @@ if(topicsAndSummariesYesterday.recordExists){
     document.querySelector(".daily-revision-container").hidden = false
 }
 else{
-    document.querySelector(".daily-revision-container").innerHTML = `<br><div style="text-align:center;">No records found for yesterday</div>`
+    document.querySelector(".daily-revision-container").innerHTML = `<br><div style="text-align:center; color: black;">No records found for yesterday</div>`
     document.querySelector(".daily-revision-container").hidden = false
 }
 
@@ -98,9 +98,11 @@ if(topicsAndSummariesOneWeekAgo.recordExists){
     document.querySelector(".weekly-revision-container").hidden = false
 }
 else if (!topicsAndSummariesYesterday.recordExists && !topicsAndSummariesOneWeekAgo.recordExists){ //If both records does not exist
-        document.querySelector(".daily-revision-container").innerHTML = `<br><div style="text-align:center;">No records found</div>`
+    document.querySelector(".h3-container").innerHTML = `<p class="txt-medium-large">Looks like you haven't made any entry yesterday or on this day a week ago.</p><p class="txt-medium" id="no-records-txt-2">Click on the 'New Entry' button above to record a new entry.</p>`
+    document.querySelector(".revision-container").classList.add("no-records-found")
+    document.querySelector(".daily-revision-container").remove()
 }
 else{
-    document.querySelector(".weekly-revision-container").innerHTML = `<br><div style="text-align:center;">No records found for day one week ago</div>`
+    document.querySelector(".weekly-revision-container").innerHTML = `<br><div style="text-align:center; color: black;">No records found for day one week ago</div>`
     document.querySelector(".weekly-revision-container").hidden = false
 }
