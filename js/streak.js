@@ -23,7 +23,6 @@ function getPreviousDate(){
         if(today.month === 1){    //Condition for YYYY-01-01
             today.year--;
             today.month = 12;
-            console.log(today.year, today.month)
         }
         else{
             today.month--;
@@ -59,7 +58,7 @@ for(let i = 0; i < 7; i++){
     })
 }
 
-const notes = JSON.parse(localStorage.notes)
+const notes = JSON.parse(localStorage.getItem("notes")) || []
 let recordsFoundForDates = []
 for(let i = 0; i < lastSevenDays.length; i++){
     recordsFoundForDates[i]
