@@ -5,7 +5,11 @@ h1{
 }
 .main-contents{
     margin: 0rem 1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
+}
+
+.main-contents h2{
+    margin: 1rem 0;
 }
 
 .list-container{

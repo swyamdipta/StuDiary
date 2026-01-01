@@ -1,7 +1,8 @@
-
+:root{
+    --streak-container-bg-color: #e7fcff;
+}
 .main-contents{
     display: flex;
-    flex-direction: row;
 }
 .left-container{
     flex: 1;
@@ -135,30 +136,92 @@
     margin-top: 1rem;
 }
 
+/* Styling For Streak Section */
+.streak-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 100%;
+}
+.streak-circle-container{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.streak-date{
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+/* Mobile Exclusive rules */
 @media screen and (max-device-width: 768px){
+    .main-contents{
+        flex-direction: column;
+    }
+    .revision-container{
+        margin: 1rem .25rem;
+        border: 2px solid #0077b6;
+        border-bottom: 3px solid #015481;
+    }
     .right-container{
+        margin: 1rem .25rem;
+        padding: 0.25rem;
+        background-color: var(--streak-container-bg-color);
+        border-radius: 5px;
+        border: 2px solid #540b0e;
+    }
+    .right-container img{
         display: none;
     }
     #yesterday-revision-link{
         width: 100%;
     }
+    .streak-section{
+        display: inline;
+    }
+    .streak-section-txt-lebel{
+        display: inline;
+    }
+    .streak-circle-container{
+        margin: .5rem 0rem;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-@media screen and (min-device-width: 768px){
+/* Desktop Exclusive Rules */
+@media screen and (min-device-width: 1024px){ 
     .inner-container{
         flex: 1;
+        max-width: 100%;
+    }
+    .main-divider{
+        background-color: #540b0e;
+        width: 2px;
     }
     .right-container{
-        padding: 50px;
+        padding: 1rem;
         overflow: hidden;
-        width: 100%;
-        height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .revision-container{
         border: 2px solid #00466c;
         margin: 0 0.75rem;
         padding: 0.75rem;
+    }
+    .streak-section{
+        padding: 0.25rem;
+        background-color: var(--streak-container-bg-color);
+        border-radius: 5px;
+        border: 2px solid #540b0e;
+    }
+    #book-image{
+        display: block;
     }
 }

@@ -39,9 +39,9 @@
         <li><a href="./about.html"><img src="./src/about.png" alt="about-icon">About</a></li>
     </ul>
     </nav>
+    <div class="date-area"></div>
     <div class="main-contents">
         <div class="left-container inner-container">
-            <div class="date-area"></div>
             <div class="new-entry-button-container">
                 <a href="./new-entry.html" class="button-link">New Entry &UpperRightArrow;</a>
             </div>
@@ -63,10 +63,16 @@
                 </div>
             </div>
         </div>
+        <div class="main-divider"></div>
         <div class="right-container inner-container">
-            <img src="./src/dairy.png" alt="">
+            <div class="streak-section">
+                <span class="streak-section-txt-lebel">Your daily streak: </span>
+                <div class="streak-circle-container"></div>
+            </div>
+            <img src="./src/dairy.png" alt="Diary Image" id="book-image">
         </div>
     </div>
     <script type="module" src="./js/index.js"></Script>
+    <script type="module" src="./js/streak.js"></script>
 </body>
 </html>
