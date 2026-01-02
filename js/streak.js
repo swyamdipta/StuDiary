@@ -69,8 +69,6 @@ for(let i = 0; i < lastSevenDays.length; i++){
     });
 }
 
-console.log(lastSevenDates)
-
 //DOM:
 const streakSection = document.querySelector(".streak-circle-container")
 lastSevenDates.forEach(day=>{
@@ -81,4 +79,22 @@ lastSevenDates.forEach(day=>{
         newDiv.style.backgroundColor = "#e6ff2b"
     }
     streakSection.appendChild(newDiv)
+})
+
+
+//Enabling users to view jump into a particular day's notes from the streak section-->
+const streakCircleContainer = document.querySelector(".streak-circle-container")
+streakCircleContainer.addEventListener("click", (e)=>{
+    if(e.target.classList.contains("streak-date")){
+        let selectedDate = e.target.textContent
+        let indexOfSelectedDate = null //0-based
+        for(let i = 0; i < lastSevenDates.length; i++){
+            if(selectedDate == lastSevenDates[i].date){
+                indexOfSelectedDate = i
+                break
+            }
+        }
+        selectedDate = lastSevenDays[indexOfSelectedDate] 
+        window.location.href = `/revision-page.html?date=${selectedDate}`
+    }
 })
