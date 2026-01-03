@@ -47,4 +47,5 @@
     border-left: 3px solid rgb(116, 27, 0);
     background: linear-gradient(to right, #fffdde, #ffffff);
     line-height: 150%;
+    white-space: pre-line;
 }
